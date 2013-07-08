@@ -230,6 +230,32 @@ if ( ! function_exists( 'foundation_widgets' ) ) :
 
 function foundation_widgets() {
 
+	/** UBC ECESS START **/ 
+	
+	// Frontpage Widget Right of Slider
+	register_sidebar( array(
+			'id' => 'foundation_sidebar_frontpage_primary_one',
+			'name' => __( 'Frontpage Primary Widget One', 'foundation' ),
+			'description' => __( 'This widget is located on the frontpage to the right of the slider', 'foundation' ),
+			'before_widget' => '<div>',
+			'after_widget' => '</div>',
+			'before_title' => '<h5>',
+			'after_title' => '</h5>',
+		) );
+		
+	// Frontpage Widget Right of Content
+	register_sidebar( array (
+			'id' => 'foundation_sidebar_frontpage_primary_two',
+			'name' => __( 'Frontpage Primary Widget Two', 'foundation' ),
+			'description' => __( 'This widget is located on the frontpage to the right of the content area', 'foundation' ),
+			'before_widget' => '<div>',
+			'after_widget' => '</div>',
+			'before_title' => '<h5>',
+			'after_title' => '</h5>',
+		));
+	
+	/** UBC ECESS END **/
+
 	// Sidebar Right
 	register_sidebar( array(
 			'id' => 'foundation_sidebar_right',
@@ -284,7 +310,7 @@ function foundation_widgets() {
 			'before_title' => '<h5>',
 			'after_title' => '</h5>',
 		) );
-
+	
 	}
 
 add_action( 'widgets_init', 'foundation_widgets' );
@@ -448,7 +474,13 @@ if (file_exists($foundation_shortcodes)) {
 	require( $foundation_shortcodes );
 }
 
-if ( ! function_exists( 'foundation_orbit' ) ):
+/** UBC ECESS START **/
+/**
+ * foundation_orbit function
+ * This function creates the foundation orbit slider for the frontpage
+ */
+if( !function_exists( 'foundation_orbit' ) ) {
+
 	function foundation_orbit() {
 		$orbit_posts = get_posts();
 		echo '<div class="slideshow-wrapper">';
@@ -464,5 +496,39 @@ if ( ! function_exists( 'foundation_orbit' ) ):
 		echo '</ul>';
 		echo '</div>';
 	}
-endif;
+}
+
+/**
+ * make_frontpage_widget_primary_one function
+ * This function creates widget area one for the front page
+ */
+if( !function_exists( 'make_frontpage_widget_primary_one' ) ) {
+
+	function make_frontpage_widget_primary_one() { ?>
+		<aside class="large-3 columns sidebar">
+			<?php if( dynamic_sidebar('foundation_sidebar_frontpage_primary_one') ) : elseif( current_user_can( 'edit_theme_options' ) ): ?>
+				<h5><?php _e( 'No widgets found.', 'foundation' ); ?></h5>
+				<p><?php printf( __( 'It seems you don\'t have any widgets in your sidebar! Would you like to %s now?', 'foundation' ), '<a href=" '. get_admin_url( '', 'widgets.php' ) .' ">populate your sidebar</a>' ); ?></p>
+			<?php endif; ?>
+		</aside>
+	<?php }
+}
+
+/**
+ * make_frontpage_widget_primary_two function
+ * This function creates widget area two for the front page
+ */
+if( !function_exists( 'make_frontpage_widget_primary_two' ) ) {
+	
+	function make_frontpage_widget_primary_two() { ?>
+		<aside class="large-4 columns sidebar">
+			<?php if( dynamic_sidebar('foundation_sidebar_frontpage_primary_two') ) : elseif( current_user_can( 'edit_theme_options' ) ): ?>
+				<h5><?php _e( 'No widgets found.', 'foundation' ); ?></h5>
+				<p><?php printf( __( 'It seems you don\'t have any widgets in your sidebar! Would you like to %s now?', 'foundation' ), '<a href=" '. get_admin_url( '', 'widgets.php' ) .' ">populate your sidebar</a>' ); ?></p>
+			<?php endif; ?>			
+		</aside>
+	<?php }
+}
+/** UBC ECESS END **/
+
 ?>
