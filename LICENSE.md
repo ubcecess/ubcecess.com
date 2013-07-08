@@ -1,0 +1,3 @@
+Copyright license will go here...
+
+Most likely the same license as the theme that we will build off of.
