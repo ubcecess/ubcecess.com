@@ -47,11 +47,26 @@ function foundation_setup() {
 		'uploads'       => true,
 	) );
 
+	// Add Theme Options Menu
+	foundation_theme_options_setup();
 }
 
 add_action( 'after_setup_theme', 'foundation_setup' );
 
 endif;
+
+/** UBC ECESS START**/
+
+/**
+ * foundation_theme_options_setup function
+ * This function registers the theme options handler tags
+ */
+function foundation_theme_options_setup() {
+
+	require_once( get_template_directory() . '/inc/theme-options/class.theme-options.php' );
+
+}
+/** UBC ECESS END **/
 
 /**
  * Enqueue Scripts and Styles for Front-End
