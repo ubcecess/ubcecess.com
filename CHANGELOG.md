@@ -1,8 +1,11 @@
 ### HEAD
 
-July 8, 2013
-* Made frontpage
-* added frontpage widget areas
+July 8, 2013 8:16pm
+* Created a template for professional page. Currently unstyled. Placeholder until layout is drawn.
 
-July 7, 2013
+July 8, 2013 12:30am
+* Made frontpage
+* Added frontpage widget areas
+
+July 7, 2013 11:50pm
 * Initial commit of theme files
