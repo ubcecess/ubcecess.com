@@ -42,9 +42,10 @@ function foundation_setup() {
 	// Custom Header
 	add_theme_support( 'custom-header', array(
 		'default-text-color' => '#000',
-		'header-text'   => true,
+		'header-text'   => false,
 		'height'		=> '200',
 		'uploads'       => true,
+		'default-image' => get_template_directory_uri() . '/images/header.jpg',
 	) );
 
 	// Add Theme Options Menu

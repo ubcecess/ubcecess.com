@@ -32,6 +32,12 @@
 <body <?php body_class(); ?>>
 	
 	<!--<div class="fixed">-->
+	<!-- 	ADDING AN ECE HEADER -->
+	<div id="ece-header">
+		<img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
+	</div>
+
+
 		<nav class="top-bar">
 			<ul class="title-area">
 				<li class="name"><h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo('name'); ?></a></h1></li>
@@ -43,7 +49,8 @@
 		</nav>
 	<!--</div>-->
 
-	<?php $header =  get_header_textcolor();
+	<!-- 
+<?php $header =  get_header_textcolor();
 	if ( $header !== "blank" ) : ?>
 	<header class="site-header" <?php $header_image = get_header_image(); if ( ! empty( $header_image ) ) : ?> style="background:url('<?php echo esc_url( $header_image ); ?>');" <?php endif; ?>>
 		<div class="row">
@@ -53,6 +60,7 @@
 		</div>
 	</header>
 	<?php endif; ?>
+ -->
 
 <!-- Begin Page -->
 <div class="row">
