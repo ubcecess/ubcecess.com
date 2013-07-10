@@ -498,20 +498,25 @@ if (file_exists($foundation_shortcodes)) {
 if( !function_exists( 'foundation_orbit' ) ) {
 
 	function foundation_orbit() {
-		$orbit_posts = get_posts();
-		echo '<div class="slideshow-wrapper">';
-		echo '<ul data-orbit>';
-		foreach( $orbit_posts as $orbit_post ) {
-			echo '<li>';
-			echo '<a href="' . get_permalink( $orbit_post->ID ) . '" title="' . esc_attr( $orbit_post->post_title ) . '">';
-			echo has_post_thumbnail( $orbit_post->ID ) ? get_the_post_thumbnail( $orbit_post->ID, 'full' ) : '<img src="' . null . '" />';
-			echo '</a>';
-			echo '<div class="orbit-caption">' . $orbit_post->post_title . '</div>';
-			echo '</li>';
-		}
-		echo '</ul>';
-		echo '</div>';
-	}
+		$orbit_posts = get_posts(); ?>
+		<div class="slideshow-wrapper">
+			<ul data-orbit>
+			<?php foreach( $orbit_posts as $orbit_post ) {
+				$orbit_excerpt = $orbit_post->post_excerpt;
+			?>
+				<li>
+					<a href="<?php echo get_permalink( $orbit_post->ID ); ?>" title="<?php echo esc_attr( $orbit_post->post_title ); ?>">
+						<?php echo has_post_thumbnail( $orbit_post->ID ) ? get_the_post_thumbnail( $orbit_post->ID, 'full' ) : '<img src="' . get_template_directory_uri() . '/img/slider_placeholder.png' . '" />'; ?>
+					</a>
+					<div class="orbit-caption">
+						<a href="<?php echo get_permalink( $orbit_post->ID ); ?>" title="<?php echo esc_attr( $orbit_post->post_title ); ?>"><h6><?php echo esc_attr( $orbit_post->post_title ); ?></h6></a>
+						<?php echo $orbit_excerpt; ?>
+					</div>
+				</li>
+			<?php } ?>
+			</ul>
+		</div>
+	<?php }
 }
 
 /**
