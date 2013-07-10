@@ -15,7 +15,7 @@
 
 <!-- Footer -->
 <hr/>
-<footer class="row">
+<footer class="ece-footer">
 
 <?php if ( dynamic_sidebar('Sidebar Footer One') || dynamic_sidebar('Sidebar Footer Two') || dynamic_sidebar('Sidebar Footer Three') || dynamic_sidebar('Sidebar Footer Four')  ) : else : ?>
 
@@ -26,22 +26,22 @@
 	<div class="row">
 		<div class="large-4 columns">
 			<dl>
-				<dt><h5><strong>Contact Us</h5></strong></dt>
-				<dt><h6><?php echo "<a href=\"mailto: contact@ubcecess.com\">";?>contact@ubcecess.com</a></dt></h6>
-				<dt><h6>Macleod Building, Room 434</dt></h6>
-				<dt><h6>University of British Columbia</dt></h6>
-				<dt><h6>2356 Main Mall</dt></h6>
-				<dt><h6>Vancouver, V6T 1Z4</dt></h6>
+				<dt><h6 class="h6footer">Contact Us</h6></dt>
+				<dt><?php echo "<a href=\"mailto: contact@ubcecess.com\">";?>contact@ubcecess.com</a></dt>
+				<dt>Macleod Building, Room 434</dt>
+				<dt>University of British Columbia</dt>
+				<dt>2356 Main Mall</dt></h6>
+				<dt>Vancouver, V6T 1Z4</dt>
 				
 			</dl>
 		</div>
 		<div class="large-4 large-offset-2 columns">
-			<dt><h5><strong>Social Media</h5></strong></dt>
+			<dt><h6 class="h6footer">Social Media</h6></dt>
 			<ul class="small-block-grid-2">
-				<li>facebook</li>
-				<li>twitter</li>
-				<li>google+</li>
-				<li>yolo</li>
+				<li>Facebook</li>
+				<li>Twitter</li>
+				<li>Google+</li>
+				<li>YOLO</li>
 			</ul>
 		</div>
 	</div>
