@@ -73,7 +73,9 @@ h1,h2,h3,h4,h5,h6,a:link {font-weight:300;}
 .site-header {border-bottom:1px solid #ddd;padding:1.5rem 0 1rem 0;margin:-1.875em 0 1.875em 0;}
 .sidebar ul li {list-style:none;}
 .top-bar-section ul li>a {border-left:1px solid #333;border-right:none;}
+.ece-header  {background-color: #262626; padding: 60px;	margin: -1.875rem 0 20px 0;}	/* this is the ECE logo header */
 
+}
 /* -----------------------------------------
    Shared Styles
 ----------------------------------------- */
@@ -104,16 +106,6 @@ iframe,
 object {
   max-width: 100%;
 }
-
-/* -----------------------------------------
-  ECE Header
------------------------------------------ */
-#ece-header {
-	background-color: #262626;
-	padding-left: 50px;
-	padding-top: 70px; padding-bottom: 60px;
-}
-
 
 
 /* -----------------------------------------
