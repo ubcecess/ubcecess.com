@@ -26,13 +26,17 @@
 	<div class="row">
 		<div class="large-4 columns">
 			<dl>
-				<dt><?php bloginfo( 'name' ); ?></dt>
-				<dt>Address</dt>
-				<dt>City, Provice, Country</dt>
-				<dt>email</dt>
+				<dt><h5><strong>Contact Us</h5></strong></dt>
+				<dt><h6><?php echo "<a href=\"mailto: contact@ubcecess.com\">";?>contact@ubcecess.com</a></dt></h6>
+				<dt><h6>Macleod Building, Room 434</dt></h6>
+				<dt><h6>University of British Columbia</dt></h6>
+				<dt><h6>2356 Main Mall</dt></h6>
+				<dt><h6>Vancouver, V6T 1Z4</dt></h6>
+				
 			</dl>
 		</div>
 		<div class="large-4 large-offset-2 columns">
+			<dt><h5><strong>Social Media</h5></strong></dt>
 			<ul class="small-block-grid-2">
 				<li>facebook</li>
 				<li>twitter</li>
