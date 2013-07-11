@@ -23,7 +23,7 @@
 <!-- Set the viewport width to device width for mobile -->
 <meta name="viewport" content="width=device-width" />
 
-<title><?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?></title>
+<title><?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>: <?php echo esc_attr( get_bloginfo( 'description', 'display' ) ); ?></title>
 
 <?php wp_head(); ?>
 
