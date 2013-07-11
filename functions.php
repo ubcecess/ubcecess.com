@@ -45,27 +45,53 @@ function foundation_setup() {
 		'header-text'   => false,
 		'height'		=> '200',
 		'uploads'       => true,
-		'default-image' => get_template_directory_uri() . '/images/header.jpg',
+		'default-image' => get_template_directory_uri() . '/img/ecess_logo.jpg',
 	) );
 
 	// Add Theme Options Menu
-	foundation_theme_options_setup();
+	//foundation_theme_before_options_setup();
+	//foundation_theme_after_options_setup();
 }
 
+add_action( 'after_setup_theme', 'foundation_theme_before_options_setup', 8 );
 add_action( 'after_setup_theme', 'foundation_setup' );
+add_action( 'after_setup_theme', 'foundation_theme_after_options_setup', 9 );
 
 endif;
 
 /** UBC ECESS START**/
 
 /**
- * foundation_theme_options_setup function
+ * foundation_theme_before_options_setup function
  * This function registers the theme options handler tags
  */
-function foundation_theme_options_setup() {
+function foundation_theme_before_options_setup() {
+
+	add_theme_support( 'general-options' );
+	add_theme_support( 'layout' );
+	add_theme_support( 'frontpage' );
+	add_theme_support( 'navigation' );
+	add_theme_support( 'header' );
+	add_theme_support( 'footer' );
 
 	require_once( get_template_directory() . '/inc/theme-options/class.theme-options.php' );
 
+}
+
+/**
+ * foundation_theme_after_options_setup function
+ * This function will load the options menus in the theme options page
+ * The menus will appear in the order in while the files are included
+ */
+function foundation_theme_after_options_setup() {
+	
+	require_if_theme_supports( 'general-options', get_template_directory() . '/inc/general-options/class.general-options.php' );
+	require_if_theme_supports( 'layout', get_template_directory() . '/inc/layout-options/class.layout-options.php' );
+	require_if_theme_supports( 'frontpage', get_template_directory() . '/inc/frontpage-options/class.frontpage-options.php' );
+	require_if_theme_supports( 'navigation', get_template_directory() . '/inc/navigation-options/class.navigation-options.php' );
+	require_if_theme_supports( 'header', get_template_directory() . '/inc/header-options/class.header-options.php' );
+	require_if_theme_supports( 'footer', get_template_directory() . '/inc/footer-options/class.footer-options.php' );
+	
 }
 /** UBC ECESS END **/
 

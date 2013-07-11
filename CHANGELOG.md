@@ -1,5 +1,9 @@
 ### HEAD
 
+July 9, 2013 8:48pm (Julien)
+* Added theme options skeleton page with tabs
+* Theme options page currently unstyled and has no content
+
 July 8, 2013 8:16pm
 * Created a template for professional page. Currently unstyled. Placeholder until layout is drawn.
 
