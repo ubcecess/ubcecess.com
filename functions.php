@@ -292,7 +292,7 @@ function foundation_widgets() {
 			'id' => 'foundation_sidebar_frontpage_primary_two',
 			'name' => __( 'Frontpage Primary Widget Two', 'foundation' ),
 			'description' => __( 'This widget is located on the frontpage to the right of the content area', 'foundation' ),
-			'before_widget' => '<div>',
+			'before_widget' => '<div class="ece-small-text">',
 			'after_widget' => '</div>',
 			'before_title' => '<h5>',
 			'after_title' => '</h5>',
