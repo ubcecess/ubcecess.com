@@ -17,15 +17,33 @@
 
 <!-- Footer -->
 <hr/>
-<footer class="ece-footer">
-
+<footer>
 <?php if ( dynamic_sidebar('Sidebar Footer One') || dynamic_sidebar('Sidebar Footer Two') || dynamic_sidebar('Sidebar Footer Three') || dynamic_sidebar('Sidebar Footer Four')  ) : else : ?>
 
+<div class="ece-sponsor-footer">
+	<div class="large-12 columns">
+		<div class="row">
+			<h3>Our Sponsors</h3>
+				The UBC Electrical & Computer Engineering Student Student (ECESS) would like to thank all our sponsors for their support.<BR><BR>
+		</div>
+		
+		<div class="row">
+				<ul class="small-block-grid-4">
+				<li><a class="ece-footer-icons" href="https://www.facebook.com/groups/ubcecess/" alt="Join the Facebook Group"><i class="icon-facebook-sign"></i></a></li>
+				<li><a class="ece-footer-icons" href="https://twitter.com/ubcecess" alt="Follow us on Twitter"><i class="icon-twitter"></i></a></li>
+				<li><a class="ece-footer-icons" href="#"><i class="icon-google-plus-sign" alt="Add us to your circles in G+"></i></a></li>
+				<li><a class="ece-footer-icons" href="#"><i class="icon-rss-sign" alt="Subscribe to the RSS feed"></i></a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="ece-footer">
 <div class="large-12 columns">
 	<!--<ul class="inline-list">
 	<?php wp_list_pages('title_li='); ?>
 	</ul>-->
-	<div class="row">
+	<div class="row">	
 		<div class="large-4 columns">
 			<dl>
 				<h6 class="h6footer"><strong>Contact Us</strong></h6>
@@ -34,10 +52,9 @@
 				University of British Columbia<br>
 				2356 Main Mall<br>
 				Vancouver, V6T 1Z4
-				
 			</dl>
 		</div>
-		<div class="large-4 large-offset-2 columns">
+		<div class="large-4 columns">
 			<dt><h6 class="h6footer">Stay Connected</h6></dt>
 			<ul class="small-block-grid-4">
 				<li><a class="ece-footer-icons" href="https://www.facebook.com/groups/ubcecess/" alt="Join the Facebook Group"><i class="icon-facebook-sign"></i></a></li>
@@ -48,7 +65,7 @@
 		</div>
 	</div>
 </div>
-
+</div>
 <?php endif; ?>
 
 </footer>

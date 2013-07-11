@@ -33,9 +33,16 @@ Tags: two-columns
 .ece-footer {
 	background-color: #262626; 
 	color:#d7d7d7; 
-	padding: 30px 0px 10px 0px; 
+	padding: 30px 0px 0px 0px; 
 	font-size: 12px;
 }
+
+.ece-sponsor-footer {
+	background-color: #f5f5f5; 
+	padding: 10px 0px 10px 0px; 
+	font-size: 12px;
+}
+
 
 .ece-footer-icons {
 	font-size: 20px;
@@ -50,7 +57,7 @@ a.ece-footer-icons:hover{
  	-webkit-transition:.5s;
 }
 
-.h6footer {color:#fff; text-transform:uppercase; font-weight:bold;}
+.h6footer {color:#ededed; text-transform:uppercase; font-weight:bold;}
 .ece-small-text {font-size:12px;}
 
 /* -----------------------------------------
