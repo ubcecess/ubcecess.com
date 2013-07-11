@@ -28,12 +28,12 @@
 	<div class="row">
 		<div class="large-4 columns">
 			<dl>
-				<dt><h6 class="h6footer">Contact Us</h6></dt>
-				<dt><?php echo "<a href=\"mailto: contact@ubcecess.com\">";?>contact@ubcecess.com</a></dt>
-				<dt>Macleod Building, Room 434</dt>
-				<dt>University of British Columbia</dt>
-				<dt>2356 Main Mall</dt></h6>
-				<dt>Vancouver, V6T 1Z4</dt>
+				<h6 class="h6footer"><strong>Contact Us</strong></h6>
+				<?php echo "<a href=\"mailto: contact@ubcecess.com\">";?>contact@ubcecess.com</a><br>
+				Macleod Building, Room 434<br>
+				University of British Columbia<br>
+				2356 Main Mall<br>
+				Vancouver, V6T 1Z4
 				
 			</dl>
 		</div>
