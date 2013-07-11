@@ -43,9 +43,12 @@ function foundation_setup() {
 	add_theme_support( 'custom-header', array(
 		'default-text-color' => '#000',
 		'header-text'   => false,
-		'height'		=> '200',
 		'uploads'       => true,
-		'default-image' => get_template_directory_uri() . '/img/ecess_logo.jpg',
+		'flex-height'	=> true,
+		'flex-width'	=> true, 
+		'height'		=> 66, 
+		'width'			=> 263,
+		'default-image' => get_template_directory_uri() . '/img/header_logo.png',
 	) );
 
 	// Add Theme Options Menu
@@ -56,6 +59,7 @@ function foundation_setup() {
 add_action( 'after_setup_theme', 'foundation_theme_before_options_setup', 8 );
 add_action( 'after_setup_theme', 'foundation_setup' );
 add_action( 'after_setup_theme', 'foundation_theme_after_options_setup', 9 );
+
 
 endif;
 
@@ -579,3 +583,4 @@ if( !function_exists( 'make_frontpage_widget_primary_two' ) ) {
 /** UBC ECESS END **/
 
 ?>
+

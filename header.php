@@ -45,7 +45,7 @@
 	<!-- 	ADDING AN ECE HEADER -->
 	<header class="ece-header">
 	<center>
-		<img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
+		<img src="<?php header_image(); ?>" height="<?php echo get_theme_support( 'custom-header' )->height; ?>" width="<?php echo get_theme_support( 'custom-header' )->width; ?>" alt="" />
 	</center>
 	</header>
 	
