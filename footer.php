@@ -38,12 +38,12 @@
 			</dl>
 		</div>
 		<div class="large-4 large-offset-2 columns">
-			<dt><h6 class="h6footer">Social Media</h6></dt>
-			<ul class="small-block-grid-2">
-				<li>Facebook</li>
-				<li>Twitter</li>
-				<li>Google+</li>
-				<li>YOLO</li>
+			<dt><h6 class="h6footer">Stay Connected</h6></dt>
+			<ul class="small-block-grid-4">
+				<li><a class="ece-footer-icons" href="https://www.facebook.com/groups/ubcecess/" alt="Join the Facebook Group"><i class="icon-facebook-sign"></i></a></li>
+				<li><a class="ece-footer-icons" href="https://twitter.com/ubcecess" alt="Follow us on Twitter"><i class="icon-twitter"></i></a></li>
+				<li><a class="ece-footer-icons" href="#"><i class="icon-google-plus-sign" alt="Add us to your circles in G+"></i></a></li>
+				<li><a class="ece-footer-icons" href="#"><i class="icon-rss-sign" alt="Subscribe to the RSS feed"></i></a></li>
 			</ul>
 		</div>
 	</div>

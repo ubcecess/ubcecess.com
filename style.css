@@ -16,6 +16,7 @@ Tags: two-columns
 /* -------------------------------------------------- 
    Table of Contents
 -----------------------------------------------------
+:: UBCECESS.com-styles
 :: Images
 :: Posts
 :: Typography
@@ -24,6 +25,33 @@ Tags: two-columns
 :: Page Name 1
 :: Page Name 2
 */
+
+/* -----------------------------------------
+   UBCECESS.com-styles
+----------------------------------------- */
+@import "css/font-awesome.css";
+.ece-footer {
+	background-color: #262626; 
+	color:#d7d7d7; 
+	padding: 30px 0px 10px 0px; 
+	font-size: 12px;
+}
+
+.ece-footer-icons {
+	font-size: 20px;
+	color:#7f7f7f;
+}
+a.ece-footer-icons:hover{
+	color:#fff;
+	transition:.5s;
+	-o-transition:.5s;
+  	-ms-transition:.5s;
+ 	-moz-transition:.5s;
+ 	-webkit-transition:.5s;
+}
+
+.h6footer {color:#fff; text-transform:uppercase; font-weight:bold;}
+.ece-small-text {font-size:12px;}
 
 /* -----------------------------------------
    Images
@@ -75,15 +103,6 @@ h1,h2,h3,h4,h5,h6,a:link {font-weight:300;}
 .sidebar ul li {list-style:none;}
 .top-bar-section ul li>a {border-left:1px solid #333;border-right:none;}
 .ece-header  {background-color: #262626; padding: 60px;	margin: -1.875rem 0 20px 0;}	/* this is the ECE logo header */
-
-/* -----------------------------------------
-   UBCECESS.com-styled classes
------------------------------------------ */
-
-.ece-footer {background-color: #262626; color:#d7d7d7; padding: 30px 0px 10px 0px; font-size: 12px;}
-.h6footer {color:#fff; text-transform:uppercase; font-weight:bold;}
-
-.ece-small-text {font-size:12px;}
 
 
 /* -----------------------------------------
