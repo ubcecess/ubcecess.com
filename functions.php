@@ -45,9 +45,7 @@ function foundation_setup() {
 		'header-text'   => false,
 		'uploads'       => true,
 		'flex-height'	=> true,
-		'flex-width'	=> true, 
-		'height'		=> 66, 
-		'width'			=> 263,
+		'flex-width'	=> true,
 		'default-image' => get_template_directory_uri() . '/img/header_logo.png',
 	) );
 
