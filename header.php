@@ -30,7 +30,6 @@
 </head>
 
 <body <?php body_class(); ?>>
-
 	<nav class="top-bar">
 		<ul class="title-area">
 			<li class="name"><h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo('name'); ?></a></h1></li>
@@ -48,9 +47,8 @@
 		<img src="<?php header_image(); ?>" height="<?php echo get_theme_support( 'custom-header' )->height; ?>" width="<?php echo get_theme_support( 'custom-header' )->width; ?>" alt="" />
 	</center>
 	</header>
-	
-	<!--</div>-->
 
 
 <!-- Begin Page -->
+<div class="container">
 <div class="row">

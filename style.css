@@ -112,7 +112,10 @@ iframe,
 object {
   max-width: 100%;
 }
-
+* {margin: 0;}
+html, body {height: 100%;}
+.container {min-height: 63%; height: auto !important; margin: 0 auto -4em;}
+.push{height: 4em; }
 
 /* -----------------------------------------
    Page Name 1
