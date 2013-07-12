@@ -580,5 +580,4 @@ if( !function_exists( 'make_frontpage_widget_primary_two' ) ) {
 }
 /** UBC ECESS END **/
 
-?>
 
