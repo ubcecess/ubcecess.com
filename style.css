@@ -112,9 +112,9 @@ iframe,
 object {
   max-width: 100%;
 }
-* {margin: 0;}
+* {margin: 0; -ms-word-wrap: break-word; word-wrap: break-word;}
 html, body {height: 100%;}
-.container {min-height: 100%; height: auto !important; height: 100%; margin: 0 auto -60px;}
+.container {min-height: 100%; height: auto !important; height: 100%; margin: 0 auto -60px; width:100%;}
 .push{height: 60px;}
 @media (max-width: 767px) {
   footer {
