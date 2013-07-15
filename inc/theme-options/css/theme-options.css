@@ -1,0 +1,72 @@
+#theme-options-wrap {
+	margin: 20px 0;
+	clear: both;
+}
+
+.ui-tabs-panel {
+	width: 85%;
+	float: left;
+	border: 1px solid #ccc;
+	background: #fff;
+	overflow: hidden;
+	min-height: 400px;
+	padding: 0 1%;
+}
+
+.ui-tabs-panel h3 {
+	margin: 10px 0 5px;
+	padding: 0 10px;
+}
+
+ul.ui-tabs-nav {
+	clear: both;
+	float: left;
+	width: 12.5%;
+	border-left:1px solid #ccc;
+	border-top:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	padding: 10px 0;
+	background: #f1f1f1;
+}
+
+.ui-tabs-nav li {
+	clear: both;
+	float: left;
+	width: 12.5%;
+	border-left:1px solid #ccc;
+	border-top:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	padding: 10px 0;
+	background: #f1f1f1;
+}
+
+.ui-tabs-nav li.ui-state-active {
+	position: relative;
+	z-index: 100;
+	margin: 0 -1px 0 -5px;
+	border-width: 1px 0 1px 1px;
+	border-color: #ccc;
+	border-style: solid;
+}
+
+.ui-tabs-nav li.ui-state-active a {
+	color: #000;
+	background: #fff;
+	padding: 6px 10px 6px 14px;
+}
+
+.ui-tabs-nav li a:hover {
+	color: #333;
+}
+
+.align-left {
+	float: left;
+}
+
+.align-left p {
+	margin: 0 10px;
+}
+
+
+
+/* ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all hide-if-no-js */
