@@ -54,9 +54,9 @@ function foundation_setup() {
 	//foundation_theme_after_options_setup();
 }
 
-add_action( 'after_setup_theme', 'foundation_theme_before_options_setup', 8 );
+//add_action( 'after_setup_theme', 'foundation_theme_before_options_setup', 8 );
 add_action( 'after_setup_theme', 'foundation_setup' );
-add_action( 'after_setup_theme', 'foundation_theme_after_options_setup', 9 );
+//add_action( 'after_setup_theme', 'foundation_theme_after_options_setup', 9 );
 
 
 endif;
@@ -298,19 +298,19 @@ function foundation_widgets() {
 			'before_title' => '<h5>',
 			'after_title' => '</h5>',
 		));
-	
-	/** UBC ECESS END **/
 
-	// Sidebar Right
+	// Primary Sidebar
 	register_sidebar( array(
-			'id' => 'foundation_sidebar_right',
-			'name' => __( 'Sidebar Right', 'foundation' ),
-			'description' => __( 'This sidebar is located on the right-hand side of each page.', 'foundation' ),
+			'id' => 'foundation_sidebar_primary',
+			'name' => __( 'Primary Sidebar', 'foundation' ),
+			'description' => __( 'This is the primary sidebar of posts and pages', 'foundation' ),
 			'before_widget' => '<div>',
 			'after_widget' => '</div>',
 			'before_title' => '<h5>',
 			'after_title' => '</h5>',
 		) );
+
+	/** UBCECESS END **/
 
 	// Sidebar Footer Column One
 	register_sidebar( array(
