@@ -313,7 +313,7 @@ function foundation_widgets() {
 	/** UBCECESS END **/
 
 	// Sidebar Footer Column One
-	register_sidebar( array(
+	/*register_sidebar( array(
 			'id' => 'foundation_sidebar_footer_one',
 			'name' => __( 'Sidebar Footer One', 'foundation' ),
 			'description' => __( 'This sidebar is located in column one of your theme footer.', 'foundation' ),
@@ -354,7 +354,7 @@ function foundation_widgets() {
 			'after_widget' => '</div>',
 			'before_title' => '<h5>',
 			'after_title' => '</h5>',
-		) );
+		) );*/
 	
 	}
 
