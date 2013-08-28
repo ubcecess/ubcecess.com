@@ -16,7 +16,6 @@
 <!-- End Page -->
 
 <!-- Footer -->
-<hr/>
 <footer>
 <?php if ( dynamic_sidebar('Sidebar Footer One') || dynamic_sidebar('Sidebar Footer Two') || dynamic_sidebar('Sidebar Footer Three') || dynamic_sidebar('Sidebar Footer Four')  ) : else : ?>
 
@@ -39,21 +38,18 @@
 </div>
 
 <div class="ece-footer">
-<div class="large-12 columns">
-	<!--<ul class="inline-list">
-	<?php wp_list_pages('title_li='); ?>
-	</ul>-->
-	<div class="row">	
-		<div class="large-4 columns">
-			<dl>
-				<h6 class="h6footer"><strong>Contact Us</strong></h6>
-				<?php echo "<a href=\"mailto: contact@ubcecess.com\">";?>contact@ubcecess.com</a><br>
-				Macleod Building, Room 434<br>
-				University of British Columbia<br>
-				2356 Main Mall<br>
-				Vancouver, V6T 1Z4
-			</dl>
-		</div>
+	<div class="large-12 columns">
+		<div class="row">	
+			<div class="large-4 columns">
+				<dl>
+					<h6 class="h6footer"><strong>Contact Us</strong></h6>
+					<?php echo "<a href=\"mailto: contact@ubcecess.com\">";?>contact@ubcecess.com</a><br>
+					Macleod Building, Room 434<br>
+					University of British Columbia<br>
+					2356 Main Mall<br>
+					Vancouver, V6T 1Z4
+				</dl>
+			</div>
 		<div class="large-4 columns">
 			<dt><h6 class="h6footer">Stay Connected</h6></dt>
 			<ul class="small-block-grid-4">
