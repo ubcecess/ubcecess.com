@@ -19,7 +19,8 @@
 		</hgroup>
 	</header>
 
-	<?php if( esc_attr( get_post_meta( get_the_ID() )['_ubcecess_featured_image_in_post'] ) === 'on' ): ?>
+	
+	<?php if( esc_attr( get_post_meta( get_the_ID() )['_ubcecess_featured_image_in_post'][0] ) === 'on' ): ?>
 		<?php if ( has_post_thumbnail()) : ?>
 		<div class="row">
 			<div class="large-12 columns">
