@@ -9,8 +9,8 @@ class UBCECESS_Foundation_Featured_Post_Choice_Box {
 	private $checkboxes = array(
 		'type' => 'checkbox',
 		'options' => array(
-			array( 'name' => 'Featured Image in Post', 'id' => '_ubcecess_featured_image_in_post', 'checked' => 'off' ),
-			array( 'name' => 'Feature Post in Slider', 'id' => '_ubcecess_featured_image_in_slider', 'checked' => 'off' )
+			array( 'name' => 'Featured Image in Post', 'id' => '_ubcecess_featured_image_in_post', 'default' => 'off' ),
+			array( 'name' => 'Feature Post in Slider', 'id' => '_ubcecess_featured_image_in_slider', 'default' => 'on' )
 		)
 	);
 
