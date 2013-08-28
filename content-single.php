@@ -20,10 +20,18 @@
 	</header>
 
 	<?php if ( has_post_thumbnail()) : ?>
-	<a href="<?php the_permalink(); ?>" class="th" title="<?php the_title_attribute(); ?>" ><?php the_post_thumbnail(); ?></a>
+	<div class="row">
+		<div class="large-12 columns">
+			<a href="<?php the_permalink(); ?>" class="th" title="<?php the_title_attribute(); ?>" ><?php the_post_thumbnail( 'full', array( 'class' => '' ) ); ?></a>
+		</div>
+	</div>
 	<?php endif; ?>
 	
-	<?php the_content(); ?>
+	<div class="row">
+		<div class="large-12 columns">
+			<?php the_content(); ?>
+		</div>
+	</div>
 
 	<footer>
 
