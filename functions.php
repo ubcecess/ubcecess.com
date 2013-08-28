@@ -381,31 +381,15 @@ endif;
  * Custom Post Excerpt
  */
 
-if ( ! function_exists( 'foundation_excerpt' ) ) :
-
-function foundation_excerpt($text) {
-        global $post;
-        if ( '' == $text ) {
-                $text = get_the_content('');
-                $text = apply_filters('the_content', $text);
-                $text = str_replace('\]\]\>', ']]&gt;', $text);
-                $text = preg_replace('@<script[^>]*?>.*?</script>@si', '', $text);
-                $text = strip_tags($text, '<p>');
-                $excerpt_length = 80;
-                $words = explode(' ', $text, $excerpt_length + 1);
-                if (count($words)> $excerpt_length) {
-                        array_pop($words);
-                        array_push($words, '<br><br><a href="'.get_permalink($post->ID) .'" class="button secondary small">' . __('Continue Reading', 'foundation') . '</a>');
-                        $text = implode(' ', $words);
-                }
-        }
-        return $text;
+function new_excerpt_more( $more ) {
+	return '<br><br><a href="'.get_permalink($post->ID) .'" class="button secondary small">' . __('Continue Reading', 'foundation') . '</a>';
 }
+add_filter('excerpt_more', 'new_excerpt_more');
 
-remove_filter('get_the_excerpt', 'wp_trim_excerpt');
-add_filter('get_the_excerpt', 'foundation_excerpt');
-
-endif;
+function custom_excerpt_length( $length ) {
+	return 50;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 /** 
  * Comments Template
@@ -579,6 +563,8 @@ if( !function_exists( 'make_frontpage_widget_primary_two' ) ) {
 		</aside>
 	<?php }
 }
+
+
 /** UBC ECESS END **/
 
 
