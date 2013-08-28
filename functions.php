@@ -539,18 +539,20 @@ if( !function_exists( 'foundation_orbit' ) ) {
 		$orbit_posts = get_posts(); ?>
 		<div class="slideshow-wrapper">
 			<ul data-orbit>
-			<?php foreach( $orbit_posts as $orbit_post ) {
-				$orbit_excerpt = $orbit_post->post_excerpt;
-			?>
-				<li>
-					<a href="<?php echo get_permalink( $orbit_post->ID ); ?>" title="<?php echo esc_attr( $orbit_post->post_title ); ?>">
-						<?php echo has_post_thumbnail( $orbit_post->ID ) ? get_the_post_thumbnail( $orbit_post->ID, 'full' ) : '<img src="' . get_template_directory_uri() . '/img/slider_placeholder.png' . '" />'; ?>
-					</a>
-					<div class="orbit-caption">
-						<a href="<?php echo get_permalink( $orbit_post->ID ); ?>" title="<?php echo esc_attr( $orbit_post->post_title ); ?>"><h6><?php echo esc_attr( $orbit_post->post_title ); ?></h6></a>
-						<?php echo $orbit_excerpt; ?>
-					</div>
-				</li>
+			<?php foreach( $orbit_posts as $orbit_post ) { ?>
+				<?php $meta = get_post_meta( $orbit_post->ID ); ?>
+				<?php $orbit_excerpt = $orbit_post->post_excerpt; ?>
+				<?php if( isset( $meta['_ubcecess_featured_image_in_slider'] ) && esc_attr( $meta['_ubcecess_featured_image_in_slider'][0] ) === 'on'  ) { ?>
+					<li>
+						<a href="<?php echo get_permalink( $orbit_post->ID ); ?>" title="<?php echo esc_attr( $orbit_post->post_title ); ?>">
+							<?php echo has_post_thumbnail( $orbit_post->ID ) ? get_the_post_thumbnail( $orbit_post->ID, 'full' ) : '<img src="' . get_template_directory_uri() . '/img/slider_placeholder.png' . '" />'; ?>
+						</a>
+						<div class="orbit-caption">
+							<a href="<?php echo get_permalink( $orbit_post->ID ); ?>" title="<?php echo esc_attr( $orbit_post->post_title ); ?>"><h6><?php echo esc_attr( $orbit_post->post_title ); ?></h6></a>
+							<?php echo $orbit_excerpt; ?>
+						</div>
+					</li>
+				<?php } ?>
 			<?php } ?>
 			</ul>
 		</div>
