@@ -72,7 +72,7 @@ class UBCECESS_Foundation_Featured_Post_Choice_Box {
 		
 		// saving the checkboxes
 		foreach( $this->checkboxes['options'] as $option ) {
-			$confirm = isset( $_POST[$option['id']] ) && $_POST[$option['id']] ? 'on' : 'off';
+			$confirm = isset( $_POST[$option['id']] ) && $_POST[$option['id']] ? $_POST[$option['id']] : 'off';
 			$this->create_post_meta_fields( $post_id, $options['id'], $confirm );
 			update_post_meta( $post_id, $option['id'], $confirm );
 		}
