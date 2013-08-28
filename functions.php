@@ -63,6 +63,15 @@ endif;
 
 /** UBC ECESS START**/
 
+if( ! function_exists( 'ubcecess_foundation_post_editor' ) ) {
+	
+	function ubcecess_foundation_post_editor() {
+		require_once( get_template_directory() . '/inc/featured-image-choice-box/class.ubcecess-foundation-featured-image-choice-box.php' );
+	}
+	
+	add_action( 'admin_init', 'ubcecess_foundation_post_editor' );
+}
+
 /**
  * foundation_theme_before_options_setup function
  * This function registers the theme options handler tags
