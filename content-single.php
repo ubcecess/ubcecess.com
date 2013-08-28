@@ -19,19 +19,25 @@
 		</hgroup>
 	</header>
 
-	<?php if ( has_post_thumbnail()) : ?>
-	<div class="row">
-		<div class="large-12 columns">
-			<a href="<?php the_permalink(); ?>" class="th" title="<?php the_title_attribute(); ?>" ><?php the_post_thumbnail( 'full', array( 'class' => '' ) ); ?></a>
+	<?php if( esc_attr( get_post_meta( get_the_ID() )['_ubcecess_featured_image_in_post'] ) === 'on' ): ?>
+		<?php if ( has_post_thumbnail()) : ?>
+		<div class="row">
+			<div class="large-12 columns">
+				<a href="<?php the_permalink(); ?>" class="th" title="<?php the_title_attribute(); ?>" ><?php the_post_thumbnail( 'full', array( 'class' => '' ) ); ?></a>
+			</div>
 		</div>
-	</div>
+		<?php endif; ?>
 	<?php endif; ?>
+	
+	<hr />
 	
 	<div class="row">
 		<div class="large-12 columns">
 			<?php the_content(); ?>
 		</div>
 	</div>
+	
+	<hr />
 
 	<footer>
 
