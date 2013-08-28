@@ -40,10 +40,11 @@ class UBCECESS_Foundation_Featured_Post_Choice_Box {
 	public function the_checkboxes( $meta ) {
 		?>
 		<?php foreach( $this->checkboxes['options'] as $option ) { ?>
-			<?php $checked = isset( $meta[$option['id']] ) ? esc_attr( $meta[$option['id']][0] ) : ''; ?>
+			<?php $confirm = isset( $meta[$option['id']] ) ? esc_attr( $meta[$option['id']][0] ) : esc_attr( $option['default'] ); ?>
+			<?php $checked = $confirm === 'on' ? 'checked="checked"' : ''; ?>
 			<p class="meta-options">
 				<label for="<?php echo $option['id']; ?> class="selctit">
-					<input name="<?php echo $option['id']; ?>" type="<?php echo $this->checkboxes['type']; ?>" id="<?php echo $option['id']; ?>" <?php checked( $checked, 'on' ); ?>>
+					<input name="<?php echo $option['id']; ?>" type="<?php echo $this->checkboxes['type']; ?>" id="<?php echo $option['id']; ?>" <?php echo $checked; ?>>
 					<label for="<?php echo $option['id']; ?>"><?php echo $option['name']; ?></label>
 				</label>
 			</p>
