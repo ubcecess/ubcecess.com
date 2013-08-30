@@ -63,6 +63,15 @@ endif;
 
 /** UBC ECESS START**/
 
+if( ! function_exists( 'ubcecess_foundation_post_editor' ) ) {
+	
+	function ubcecess_foundation_post_editor() {
+		require_once( get_template_directory() . '/inc/featured-image-choice-box/class.ubcecess-foundation-featured-image-choice-box.php' );
+	}
+	
+	add_action( 'admin_init', 'ubcecess_foundation_post_editor' );
+}
+
 /**
  * foundation_theme_before_options_setup function
  * This function registers the theme options handler tags
@@ -313,7 +322,7 @@ function foundation_widgets() {
 	/** UBCECESS END **/
 
 	// Sidebar Footer Column One
-	register_sidebar( array(
+	/*register_sidebar( array(
 			'id' => 'foundation_sidebar_footer_one',
 			'name' => __( 'Sidebar Footer One', 'foundation' ),
 			'description' => __( 'This sidebar is located in column one of your theme footer.', 'foundation' ),
@@ -354,7 +363,7 @@ function foundation_widgets() {
 			'after_widget' => '</div>',
 			'before_title' => '<h5>',
 			'after_title' => '</h5>',
-		) );
+		) );*/
 	
 	}
 
@@ -511,21 +520,37 @@ if (file_exists($foundation_shortcodes)) {
 if( !function_exists( 'foundation_orbit' ) ) {
 
 	function foundation_orbit() {
-		$orbit_posts = get_posts(); ?>
+		$args = array(
+			'posts_per_page'   => 5,
+			'offset'           => 0,
+			'category'         => '',
+			'orderby'          => 'post_date',
+			'order'            => 'DESC',
+			'include'          => '',
+			'exclude'          => '',
+			'meta_key'         => '_ubcecess_featured_image_in_slider',
+			'meta_compare'     => '=',
+			'meta_value'       => 'on',
+			'post_type'        => 'post',
+			'post_mime_type'   => '',
+			'post_parent'      => '',
+			'post_status'      => 'publish',
+			'suppress_filters' => true 
+		);
+		$orbit_posts = get_posts( $args ); ?>
 		<div class="slideshow-wrapper">
 			<ul data-orbit>
-			<?php foreach( $orbit_posts as $orbit_post ) {
-				$orbit_excerpt = $orbit_post->post_excerpt;
-			?>
-				<li>
-					<a href="<?php echo get_permalink( $orbit_post->ID ); ?>" title="<?php echo esc_attr( $orbit_post->post_title ); ?>">
-						<?php echo has_post_thumbnail( $orbit_post->ID ) ? get_the_post_thumbnail( $orbit_post->ID, 'full' ) : '<img src="' . get_template_directory_uri() . '/img/slider_placeholder.png' . '" />'; ?>
-					</a>
-					<div class="orbit-caption">
-						<a href="<?php echo get_permalink( $orbit_post->ID ); ?>" title="<?php echo esc_attr( $orbit_post->post_title ); ?>"><h6><?php echo esc_attr( $orbit_post->post_title ); ?></h6></a>
-						<?php echo $orbit_excerpt; ?>
-					</div>
-				</li>
+			<?php foreach( $orbit_posts as $orbit_post ) { ?>
+				<?php $orbit_excerpt = $orbit_post->post_excerpt; ?>
+					<li>
+						<a href="<?php echo get_permalink( $orbit_post->ID ); ?>" title="<?php echo esc_attr( $orbit_post->post_title ); ?>">
+							<?php echo has_post_thumbnail( $orbit_post->ID ) ? get_the_post_thumbnail( $orbit_post->ID, 'full' ) : '<img src="' . get_template_directory_uri() . '/img/slider_placeholder.png' . '" />'; ?>
+						</a>
+						<div class="orbit-caption">
+							<a href="<?php echo get_permalink( $orbit_post->ID ); ?>" title="<?php echo esc_attr( $orbit_post->post_title ); ?>"><h6><?php echo esc_attr( $orbit_post->post_title ); ?></h6></a>
+							<?php echo $orbit_excerpt; ?>
+						</div>
+					</li>
 			<?php } ?>
 			</ul>
 		</div>
