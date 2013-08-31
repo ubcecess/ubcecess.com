@@ -391,7 +391,7 @@ endif;
  */
 
 function new_excerpt_more( $more ) {
-	return '<br><br><a href="'.get_permalink($post->ID) .'" class="button secondary small">' . __('Continue Reading', 'foundation') . '</a>';
+	return '...<br><br><a href="'.get_permalink($post->ID) .'" class="button secondary small">' . __('Continue Reading', 'foundation') . '</a>';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 

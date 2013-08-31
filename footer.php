@@ -27,7 +27,7 @@
 		</div>
 		
 		<div class="row">
-				<ul class="small-block-grid-4">
+				<ul class="inline-list">
 				<li><a class="ece-footer-icons" href="https://www.facebook.com/groups/ubcecess/" alt="Join the Facebook Group"><i class="icon-facebook-sign"></i></a></li>
 				<li><a class="ece-footer-icons" href="https://twitter.com/ubcecess" alt="Follow us on Twitter"><i class="icon-twitter"></i></a></li>
 				<li><a class="ece-footer-icons" href="#"><i class="icon-google-plus-sign" alt="Add us to your circles in G+"></i></a></li>
