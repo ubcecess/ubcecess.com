@@ -291,10 +291,10 @@ function foundation_widgets() {
 			'id' => 'foundation_sidebar_frontpage_primary_one',
 			'name' => __( 'Frontpage Primary Widget One', 'foundation' ),
 			'description' => __( 'This widget is located on the frontpage to the right of the slider', 'foundation' ),
-			'before_widget' => '<div class="ece-small-text">',
+			'before_widget' => '<div>',
 			'after_widget' => '</div>',
-			'before_title' => '<h5><strong>',
-			'after_title' => '</h5></strong>',
+			'before_title' => '<h5>',
+			'after_title' => '</h5>',
 		) );
 		
 	// Frontpage Widget Right of Content
@@ -302,7 +302,7 @@ function foundation_widgets() {
 			'id' => 'foundation_sidebar_frontpage_primary_two',
 			'name' => __( 'Frontpage Primary Widget Two', 'foundation' ),
 			'description' => __( 'This widget is located on the frontpage to the right of the content area', 'foundation' ),
-			'before_widget' => '<div class="ece-small-text">',
+			'before_widget' => '<div>',
 			'after_widget' => '</div>',
 			'before_title' => '<h5>',
 			'after_title' => '</h5>',

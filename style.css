@@ -59,7 +59,7 @@ a.ece-footer-icons:hover{
 }
 .h6footer {color:#ededed; text-transform:uppercase; font-weight:bold;}
 .smallspacedcaps {color:#; text-transform:uppercase; font-size:80%; letter-spacing:1px;}
-.ece-small-text {font-size:12px;}
+.ece-small-text {font-size:80%;}
 
 /* THESE ARE CUSTOMIZATIONS MADE TO THE FOUNDATION CSS CLASSES. */
 .orbit-bullets{margin:0 auto 30px auto;overflow:hidden;position:relative;top:10px}
