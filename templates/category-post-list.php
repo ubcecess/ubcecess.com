@@ -5,6 +5,7 @@ Template Name: Category Post List (Permalink=Category name)
 <?php get_header(); ?>
 
 <div class="large-9 columns" role="main">
+<?php the_title('<h2>', '</h2>'); ?>
 
 <?php query_posts('category_name='.get_permalink().'&post_status=publish');?>
 
