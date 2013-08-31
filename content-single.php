@@ -15,7 +15,7 @@
 	<header>
 		<hgroup>
 			<h2><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'foundation' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-			<h6><?php _e('Written by', 'foundation' );?> <?php the_author_link(); ?> on <?php the_time(get_option('date_format')); ?></h6>
+			<h6 class="h6postmetadata"><?php _e('Posted by', 'foundation' );?> <?php the_author_posts_link(); ?> on <?php the_time(get_option('date_format')); ?></h6>
 		</hgroup>
 	</header>
 
@@ -44,7 +44,7 @@
 
 		<p><?php wp_link_pages(); ?></p>
 
-		<h6><?php _e('Posted Under:', 'foundation' );?> <?php the_category(', '); ?></h6>
+		<h6 class="h6postmetadata"><?php _e('Posted Under:', 'foundation' );?> <?php the_category(', '); ?></h6><br>
 		<?php the_tags('<span class="radius secondary label">','</span><span class="radius secondary label">','</span>'); ?>
 
 		<?php get_template_part('author-box'); ?>
