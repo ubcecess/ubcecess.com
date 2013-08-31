@@ -57,16 +57,15 @@ a.ece-footer-icons:hover{
  	-moz-transition:.5s;
  	-webkit-transition:.5s;
 }
-.h6footer {color:#ededed; text-transform:uppercase; font-weight:bold;}
-.smallspacedcaps {color:#; text-transform:uppercase; font-size:80%; letter-spacing:1px;}
-.ece-small-text {font-size:80%;}
+
+.small {font-size:80%;}
+.spacedcaps  {text-transform:uppercase; letter-spacing:1px;}
+.bordered{border:1px solid #dddddd; padding:3px;}
 
 /* THESE ARE CUSTOMIZATIONS MADE TO THE FOUNDATION CSS CLASSES. */
 .orbit-bullets{margin:0 auto 30px auto;overflow:hidden;position:relative;top:10px}
 .orbit-bullets li{display:block;width:10px;height:10px;background:#d7d7d7;float:left;margin-right:6px;border:solid 0px #262626;-webkit-border-radius:1000px;border-radius:1000px}
 .orbit-bullets li.active{background:#262626}
-
-
 
 
 

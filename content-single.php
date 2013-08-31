@@ -15,7 +15,7 @@
 	<header>
 		<hgroup>
 			<h2><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'foundation' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-			<h6 class="smallspacedcaps"><?php _e('Posted by', 'foundation' );?> <?php the_author_posts_link(); ?> on <?php the_time(get_option('date_format')); ?></h6>
+			<h6 class="small spacedcaps"><?php _e('Posted by', 'foundation' );?> <?php the_author_posts_link(); ?> on <?php the_time(get_option('date_format')); ?></h6>
 		</hgroup>
 	</header>
 

@@ -15,9 +15,9 @@
 	<div class="alignleft" style="margin:0px 10px 50px 0px;">
     	<a href="<?php the_permalink() ?>">
 		<?php if ( has_post_thumbnail()) : ?>
- 			<?php echo get_the_post_thumbnail($post_id, 'thumbnail'); ?>
+ 			<?php echo get_the_post_thumbnail($post_id, 'thumbnail', array('class'=>'bordered')); ?>
     	<?php else : ?>
-    		<img src="<?php echo get_template_directory_uri(); ?>/img/thumbnail_placeholder.png" width="150" height="150"/>
+    		<img src="<?php echo get_template_directory_uri(); ?>/img/thumbnail_placeholder.png" width="150" height="150" class='bordered'>
 		<?php endif; ?>
         </a>
 	</div>
@@ -25,7 +25,7 @@
 		
 			<h4><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'foundation' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h4>
 			<?php if ( is_sticky() ) : ?><span class="right radius secondary label"><?php _e( 'Sticky', 'foundation' ); ?></span><?php endif; ?>
-			<h6 class="smallspacedcaps">Posted by <?php the_author_posts_link(); ?> on <?php the_time(get_option('date_format')); ?></h6>
+			<h6 class="small spacedcaps">Posted by <?php the_author_posts_link(); ?> on <?php the_time(get_option('date_format')); ?></h6>
 	</header>
 	<?php the_excerpt(); ?>
 	<hr>

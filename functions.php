@@ -293,8 +293,8 @@ function foundation_widgets() {
 			'description' => __( 'This widget is located on the frontpage to the right of the slider', 'foundation' ),
 			'before_widget' => '<div>',
 			'after_widget' => '</div>',
-			'before_title' => '<h5>',
-			'after_title' => '</h5>',
+			'before_title' => '<h5 class="spacedcaps"><strong>',
+			'after_title' => '</strong></h5>',
 		) );
 		
 	// Frontpage Widget Right of Content
@@ -304,8 +304,8 @@ function foundation_widgets() {
 			'description' => __( 'This widget is located on the frontpage to the right of the content area', 'foundation' ),
 			'before_widget' => '<div>',
 			'after_widget' => '</div>',
-			'before_title' => '<h5>',
-			'after_title' => '</h5>',
+			'before_title' => '<h5 class="spacedcaps"><strong>',
+			'after_title' => '</strong></h5>',
 		));
 
 	// Primary Sidebar
@@ -315,8 +315,8 @@ function foundation_widgets() {
 			'description' => __( 'This is the primary sidebar of posts and pages', 'foundation' ),
 			'before_widget' => '<div>',
 			'after_widget' => '</div>',
-			'before_title' => '<h5>',
-			'after_title' => '</h5>',
+			'before_title' => '<h5 class="spacedcaps"><strong>',
+			'after_title' => '</strong></h5>',
 		) );
 
 	/** UBCECESS END **/

@@ -42,7 +42,7 @@
 		<div class="row">	
 			<div class="large-4 columns">
 				<dl>
-					<h6 class="h6footer"><strong>Contact Us</strong></h6>
+					<h6 class="spacedcaps" style="color:#ededed; font-weight:bold;">Contact Us</h6>
 					<?php echo "<a href=\"mailto: contact@ubcecess.com\">";?>contact@ubcecess.com</a><br>
 					Macleod Building, Room 434<br>
 					University of British Columbia<br>
@@ -51,7 +51,7 @@
 				</dl>
 			</div>
 		<div class="large-4 columns">
-			<dt><h6 class="h6footer">Stay Connected</h6></dt>
+			<dt><h6 class="spacedcaps" style="color:#ededed; font-weight:bold;">Stay Connected</h6></dt>
 			<ul class="small-block-grid-4">
 				<li><a class="ece-footer-icons" href="https://www.facebook.com/groups/ubcecess/" alt="Join the Facebook Group"><i class="icon-facebook-sign"></i></a></li>
 				<li><a class="ece-footer-icons" href="https://twitter.com/ubcecess" alt="Follow us on Twitter"><i class="icon-twitter"></i></a></li>
