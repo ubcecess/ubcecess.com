@@ -313,7 +313,7 @@ function foundation_widgets() {
 			'id' => 'foundation_sidebar_primary',
 			'name' => __( 'Primary Sidebar', 'foundation' ),
 			'description' => __( 'This is the primary sidebar of posts and pages', 'foundation' ),
-			'before_widget' => '<div>',
+			'before_widget' => '<div class="ece-widgets">',
 			'after_widget' => '</div>',
 			'before_title' => '<h5 class="spacedcaps"><strong>',
 			'after_title' => '</strong></h5>',

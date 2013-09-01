@@ -51,11 +51,17 @@ body {
 }
 a.ece-footer-icons:hover{
 	color:#fff;
-	transition:.5s;
-	-o-transition:.5s;
-  	-ms-transition:.5s;
- 	-moz-transition:.5s;
- 	-webkit-transition:.5s;
+	transition:.2s;
+	-o-transition:.2s;
+  	-ms-transition:.2s;
+ 	-moz-transition:.2s;
+ 	-webkit-transition:.2s;
+}
+
+.ece-widgets{
+	color: #626262;	
+	line-height:20px;
+	padding-bottom:20px;
 }
 
 .small {font-size:80%;}
