@@ -169,11 +169,19 @@ if ( ! function_exists( 'foundation_comptability' ) ) :
 
 function foundation_comptability () {
 
-echo "<script>";
+/*echo "<script>";
 echo "document.write('<script src=' +";
 echo "('__proto__' in {} ? '" . get_template_directory_uri() . "/js/vendor/zepto" . "' : '" . get_template_directory_uri() . "/js/vendor/jquery" . "') +";
 echo "'.js><\/script>')";
-echo "</script>";
+echo "</script>";*/
+
+	?>
+	<script>
+		document.write('<script src=<?php echo get_template_directory_uri() . "/js/vendor/"; ?>'
+			+ ('__proto__' in {} ? 'zepto' : 'jquery')
+			+ '.js><\/script>');
+	</script>
+	<?php
 
 }
 
