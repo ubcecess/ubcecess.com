@@ -124,8 +124,10 @@ function foundation_assets() {
 		//wp_deregister_script('jquery');
 
 		// Load JavaScripts
+		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'foundation', get_template_directory_uri() . '/js/foundation.min.js', null, '4.0', true );
 		wp_enqueue_script( 'modernizr', get_template_directory_uri().'/js/vendor/custom.modernizr.js', null, '2.1.0');
+		
 		if ( is_singular() ) wp_enqueue_script( "comment-reply" );
 
 		// Load Stylesheets
@@ -153,7 +155,7 @@ endif;
 if ( ! function_exists( 'foundation_js_init' ) ) :
 
 function foundation_js_init () {
-    echo '<script>$(document).foundation();</script>';
+    echo '<script>jQuery(document).foundation();</script>';
 }
 
 add_action('wp_footer', 'foundation_js_init', 50);
@@ -177,7 +179,7 @@ echo "</script>";*/
 
 	?>
 	<script>
-		document.write('<script src=<?php echo get_template_directory_uri() . "/js/vendor/"; ?>'
+		document.write('<script src=' + <?php echo get_template_directory_uri(); ?> + '/js/vendor/'
 			+ ('__proto__' in {} ? 'zepto' : 'jquery')
 			+ '.js><\/script>');
 	</script>
@@ -552,7 +554,7 @@ if( !function_exists( 'foundation_orbit' ) ) {
 				<?php $orbit_excerpt = $orbit_post->post_excerpt; ?>
 					<li>
 						<a href="<?php echo get_permalink( $orbit_post->ID ); ?>" title="<?php echo esc_attr( $orbit_post->post_title ); ?>">
-							<?php echo has_post_thumbnail( $orbit_post->ID ) ? get_the_post_thumbnail( $orbit_post->ID, 'full' ) : '<img src="' . get_template_directory_uri() . '/img/slider_placeholder.png' . '" />'; ?>
+							<?php echo has_post_thumbnail( $orbit_post->ID ) ? get_the_post_thumbnail( $orbit_post->ID, 'full' ) : '<img src="' . get_template_directory_uri() . '/img/slider_placeholder.png' . '" width="720" height="450" />'; ?>
 						</a>
 						<div class="orbit-caption ece-white-text">
 							<a href="<?php echo get_permalink( $orbit_post->ID ); ?>" title="<?php echo esc_attr( $orbit_post->post_title ); ?>"><h6 class="ece-white-text"><?php echo esc_attr( $orbit_post->post_title ); ?></h6></a>
