@@ -16,11 +16,11 @@
 <!-- End Page -->
 
 <!-- Footer -->
-<footer>
+<!--<footer>-->
 <?php //if ( dynamic_sidebar('Sidebar Footer One') || dynamic_sidebar('Sidebar Footer Two') || dynamic_sidebar('Sidebar Footer Three') || dynamic_sidebar('Sidebar Footer Four')  ) : else : ?>
 
-<div class="ece-sponsor-footer">
-	<div class="large-12 columns">
+<div class="">
+	<div class="ece-sponsor-footer large-12 columns">
 		<div class="row">
 			<h3>Our Sponsors</h3>
 				The UBC Electrical & Computer Engineering Student Student (ECESS) would like to thank all our sponsors for their support.<BR><BR>
@@ -37,8 +37,8 @@
 	</div>
 </div>
 
-<div class="ece-footer">
-	<div class="large-12 columns">
+<div class="">
+	<div class="ece-footer large-12 columns">
 		<div class="row">	
 			<div class="large-4 columns">
 				<dl>
@@ -64,7 +64,7 @@
 </div>
 <?php //endif; ?>
 
-</footer>
+<!--</footer>-->
 <!-- End Footer -->
 
 <?php wp_footer(); ?>
