@@ -546,9 +546,9 @@ if( !function_exists( 'foundation_orbit' ) ) {
 						<a href="<?php echo get_permalink( $orbit_post->ID ); ?>" title="<?php echo esc_attr( $orbit_post->post_title ); ?>">
 							<?php echo has_post_thumbnail( $orbit_post->ID ) ? get_the_post_thumbnail( $orbit_post->ID, 'full' ) : '<img src="' . get_template_directory_uri() . '/img/slider_placeholder.png' . '" />'; ?>
 						</a>
-						<div class="orbit-caption">
-							<a href="<?php echo get_permalink( $orbit_post->ID ); ?>" title="<?php echo esc_attr( $orbit_post->post_title ); ?>"><h6><?php echo esc_attr( $orbit_post->post_title ); ?></h6></a>
-							<?php echo $orbit_excerpt; ?>
+						<div class="orbit-caption ece-white-text">
+							<a href="<?php echo get_permalink( $orbit_post->ID ); ?>" title="<?php echo esc_attr( $orbit_post->post_title ); ?>"><h6 class="ece-white-text"><?php echo esc_attr( $orbit_post->post_title ); ?></h6></a>
+							<?php echo '<p class="ece-white-text">' . $orbit_excerpt . '</p>'; ?>
 						</div>
 					</li>
 			<?php } ?>

@@ -64,6 +64,10 @@ a.ece-footer-icons:hover{
 	padding-bottom:20px;
 }
 
+.ece-white-text {
+	color: #fff;
+}
+
 .small {font-size:80%;}
 .spacedcaps  {text-transform:uppercase; letter-spacing:1px;}
 .bordered{border:1px solid #dddddd; padding:3px;}
