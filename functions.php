@@ -568,7 +568,7 @@ if( !function_exists( 'foundation_orbit' ) ) {
 if( !function_exists( 'make_frontpage_widget_primary_one' ) ) {
 
 	function make_frontpage_widget_primary_one() { ?>
-		<aside class="large-3 columns sidebar">
+		<aside class="large-3 small-12 columns sidebar">
 			<?php if( dynamic_sidebar('foundation_sidebar_frontpage_primary_one') ) : elseif( current_user_can( 'edit_theme_options' ) ): ?>
 				<h5><?php _e( 'No widgets found.', 'foundation' ); ?></h5>
 				<p><?php printf( __( 'It seems you don\'t have any widgets in your sidebar! Would you like to %s now?', 'foundation' ), '<a href=" '. get_admin_url( '', 'widgets.php' ) .' ">populate your sidebar</a>' ); ?></p>
@@ -584,7 +584,7 @@ if( !function_exists( 'make_frontpage_widget_primary_one' ) ) {
 if( !function_exists( 'make_frontpage_widget_primary_two' ) ) {
 	
 	function make_frontpage_widget_primary_two() { ?>
-		<aside class="large-4 columns sidebar">
+		<aside class="large-3 small-12 columns sidebar">
 			<?php if( dynamic_sidebar('foundation_sidebar_frontpage_primary_two') ) : elseif( current_user_can( 'edit_theme_options' ) ): ?>
 				<h5><?php _e( 'No widgets found.', 'foundation' ); ?></h5>
 				<p><?php printf( __( 'It seems you don\'t have any widgets in your sidebar! Would you like to %s now?', 'foundation' ), '<a href=" '. get_admin_url( '', 'widgets.php' ) .' ">populate your sidebar</a>' ); ?></p>

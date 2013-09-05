@@ -21,15 +21,15 @@ get_header();
 		<!-- Slider and Main Container -->
 		<div class="row">
 			<!-- Slider -->
-			<div class="large-9 columns">
+			<div class="large-9 small-12 columns">
 				<?php foundation_orbit(); ?>
 			</div>
 			<!-- End Slider -->
-			<?php make_frontpage_widget_primary_one(); ?>
+			<div class="hide-for-small"><?php make_frontpage_widget_primary_one(); ?></div>
 		</div>
 		<div class="row">
 			<!-- Main Content -->
-			<div class="large-8 columns" role="main">
+			<div class="large-9 small-12 columns" role="main">
 				<?php
 				if( have_posts() ):
 					while( have_posts() ) : the_post();
@@ -44,10 +44,21 @@ get_header();
 				?>
 			</div>
 			<!-- End Main Content -->
-			<?php make_frontpage_widget_primary_two(); ?>
+			<div class="hide-for-small"><?php make_frontpage_widget_primary_two(); ?></div>
 		</div>
 		<!-- End Slider and Main Container -->
+		<div class="show-for-small hide-for-medium-up row">
+			<div class="small-12 columns">
+				<div class="row">
+					<?php make_frontpage_widget_primary_one(); ?>
+				</div>
+				<div class="row">
+					<?php make_frontpage_widget_primary_two(); ?>
+				</div>
+			</div>
+		</div>
 	</div>
+	
 	<!-- End Content Container -->
 <?php //get_sidebar(); ?>
 <?php get_footer(); ?>
