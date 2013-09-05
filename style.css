@@ -72,6 +72,8 @@ a.ece-footer-icons:hover{
 .spacedcaps  {text-transform:uppercase; letter-spacing:1px;}
 .bordered{border:1px solid #dddddd; padding:3px;}
 
+nav.expanded { background-color: #111111 !important; }
+
 /* THESE ARE CUSTOMIZATIONS MADE TO THE FOUNDATION CSS CLASSES. */
 .orbit-bullets{margin:0 auto 30px auto;overflow:hidden;position:relative;top:10px}
 .orbit-bullets li{display:block;width:10px;height:10px;background:#d7d7d7;float:left;margin-right:6px;border:solid 0px #262626;-webkit-border-radius:1000px;border-radius:1000px}
