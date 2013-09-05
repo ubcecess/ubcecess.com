@@ -122,16 +122,18 @@ function foundation_assets() {
 		 * @see foundation_compatibility & http://foundation.zurb.com/docs/javascript.html
 		 */
 		//wp_deregister_script('jquery');
+		// DO NOT deregister jquery like that. it will cause plugin compatibility issues that rely on jquery
 
 		// Load JavaScripts
-		wp_enqueue_script( 'foundation', get_template_directory_uri() . '/js/foundation.min.js', null, '4.0', true );
+		wp_enqueue_script( 'foundation', get_template_directory_uri() . '/js/foundation.min.js', array( 'jquery' ), '4.0', true );
 		wp_enqueue_script( 'modernizr', get_template_directory_uri().'/js/vendor/custom.modernizr.js', null, '2.1.0');
+		
 		if ( is_singular() ) wp_enqueue_script( "comment-reply" );
 
 		// Load Stylesheets
 		wp_enqueue_style( 'normalize', get_template_directory_uri().'/css/normalize.css' );
 		wp_enqueue_style( 'foundation', get_template_directory_uri().'/css/foundation.min.css' );
-		wp_enqueue_style( 'app', get_stylesheet_uri(), array('foundation') );
+		wp_enqueue_style( 'app', get_stylesheet_uri(), array( 'foundation' ) );
 		wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.css' );
 		
 		// Load Google Fonts API
@@ -153,7 +155,7 @@ endif;
 if ( ! function_exists( 'foundation_js_init' ) ) :
 
 function foundation_js_init () {
-    echo '<script>$(document).foundation();</script>';
+    echo '<script>jQuery(document).ready(function($) { $(document).foundation(); });</script>';
 }
 
 add_action('wp_footer', 'foundation_js_init', 50);
@@ -165,21 +167,23 @@ endif;
  * @see: http://foundation.zurb.com/docs/javascript.html
  */
 
-if ( ! function_exists( 'foundation_comptability' ) ) :
+/*if ( ! function_exists( 'foundation_comptability' ) ) :
 
 function foundation_comptability () {
 
-echo "<script>";
-echo "document.write('<script src=' +";
-echo "('__proto__' in {} ? '" . get_template_directory_uri() . "/js/vendor/zepto" . "' : '" . get_template_directory_uri() . "/js/vendor/jquery" . "') +";
-echo "'.js><\/script>')";
-echo "</script>";
+	?>
+	<script>
+		document.write('<script src=' + <?php echo get_template_directory_uri(); ?> + '/js/vendor/'
+			+ ('__proto__' in {} ? 'zepto' : 'jquery')
+			+ '.js><\/script>');
+	</script>
+	<?php
 
 }
 
 add_action('wp_footer', 'foundation_comptability', 10);
 
-endif;
+endif; */
 
 /**
  * Register Navigation Menus
@@ -544,7 +548,7 @@ if( !function_exists( 'foundation_orbit' ) ) {
 				<?php $orbit_excerpt = $orbit_post->post_excerpt; ?>
 					<li>
 						<a href="<?php echo get_permalink( $orbit_post->ID ); ?>" title="<?php echo esc_attr( $orbit_post->post_title ); ?>">
-							<?php echo has_post_thumbnail( $orbit_post->ID ) ? get_the_post_thumbnail( $orbit_post->ID, 'full' ) : '<img src="' . get_template_directory_uri() . '/img/slider_placeholder.png' . '" />'; ?>
+							<?php echo has_post_thumbnail( $orbit_post->ID ) ? get_the_post_thumbnail( $orbit_post->ID, 'full' ) : '<img src="' . get_template_directory_uri() . '/img/slider_placeholder.png' . '" width="720" height="450" />'; ?>
 						</a>
 						<div class="orbit-caption ece-white-text">
 							<a href="<?php echo get_permalink( $orbit_post->ID ); ?>" title="<?php echo esc_attr( $orbit_post->post_title ); ?>"><h6 class="ece-white-text"><?php echo esc_attr( $orbit_post->post_title ); ?></h6></a>
