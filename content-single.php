@@ -21,6 +21,7 @@
 
 
 	<?php $meta_data =  get_post_meta( get_the_ID() ); ?>
+	<hr />
 	<?php if( esc_attr( $meta_data['_ubcecess_featured_image_in_post'][0] ) === 'on' ): ?>
 		<?php if ( has_post_thumbnail()) : ?>
 		<div class="row">
@@ -30,8 +31,6 @@
 		</div>
 		<?php endif; ?>
 	<?php endif; ?>
-	
-	<hr />
 	
 	<div class="row">
 		<div class="large-12 columns">

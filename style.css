@@ -29,11 +29,12 @@ Tags: two-columns
 /* -----------------------------------------
    UBCECESS.com-styles
 ----------------------------------------- */
-/*@import "css/font-awesome.css";*/
+@import "font-awesome/css/font-awesome.min.css";
 
-/*body {
+
+.content-text {
     font-size: 12px;
-}*/
+}
 .ece-header  {background-color: #262626; padding: 60px;	margin: -1.875rem 0 20px 0;}	/* this is the ECE logo header */
 
 .ece-footer {

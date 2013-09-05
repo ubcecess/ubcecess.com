@@ -50,5 +50,5 @@
 
 
 <!-- Begin Page -->
-<div class="container">
-<div class="row">
+<div class="container content-text">
+<div class="row ">
