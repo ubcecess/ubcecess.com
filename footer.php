@@ -19,7 +19,7 @@
 <!--<footer>-->
 <?php //if ( dynamic_sidebar('Sidebar Footer One') || dynamic_sidebar('Sidebar Footer Two') || dynamic_sidebar('Sidebar Footer Three') || dynamic_sidebar('Sidebar Footer Four')  ) : else : ?>
 
-
+<div class="content-text">
 <!--
 <div class="">
 	<div class="ece-sponsor-footer large-12 columns">
@@ -64,7 +64,7 @@
 		</div>
 	</div>
 <?php //endif; ?>
-
+</div>
 <!--</footer>-->
 <!-- End Footer -->
 
