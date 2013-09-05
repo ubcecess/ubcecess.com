@@ -122,10 +122,10 @@ function foundation_assets() {
 		 * @see foundation_compatibility & http://foundation.zurb.com/docs/javascript.html
 		 */
 		//wp_deregister_script('jquery');
+		// DO NOT deregister jquery like that. it will cause plugin compatibility issues that rely on jquery
 
 		// Load JavaScripts
-		wp_enqueue_script( 'jquery' );
-		wp_enqueue_script( 'foundation', get_template_directory_uri() . '/js/foundation.min.js', null, '4.0', true );
+		wp_enqueue_script( 'foundation', get_template_directory_uri() . '/js/foundation.min.js', array( 'jquery' ), '4.0', true );
 		wp_enqueue_script( 'modernizr', get_template_directory_uri().'/js/vendor/custom.modernizr.js', null, '2.1.0');
 		
 		if ( is_singular() ) wp_enqueue_script( "comment-reply" );
@@ -133,7 +133,7 @@ function foundation_assets() {
 		// Load Stylesheets
 		wp_enqueue_style( 'normalize', get_template_directory_uri().'/css/normalize.css' );
 		wp_enqueue_style( 'foundation', get_template_directory_uri().'/css/foundation.min.css' );
-		wp_enqueue_style( 'app', get_stylesheet_uri(), array('foundation') );
+		wp_enqueue_style( 'app', get_stylesheet_uri(), array( 'foundation' ) );
 		wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.css' );
 		
 		// Load Google Fonts API
@@ -155,7 +155,7 @@ endif;
 if ( ! function_exists( 'foundation_js_init' ) ) :
 
 function foundation_js_init () {
-    echo '<script>jQuery(document).foundation();</script>';
+    echo '<script>jQuery(document).ready(function($) { $(document).foundation(); });</script>';
 }
 
 add_action('wp_footer', 'foundation_js_init', 50);
@@ -167,15 +167,9 @@ endif;
  * @see: http://foundation.zurb.com/docs/javascript.html
  */
 
-if ( ! function_exists( 'foundation_comptability' ) ) :
+/*if ( ! function_exists( 'foundation_comptability' ) ) :
 
 function foundation_comptability () {
-
-/*echo "<script>";
-echo "document.write('<script src=' +";
-echo "('__proto__' in {} ? '" . get_template_directory_uri() . "/js/vendor/zepto" . "' : '" . get_template_directory_uri() . "/js/vendor/jquery" . "') +";
-echo "'.js><\/script>')";
-echo "</script>";*/
 
 	?>
 	<script>
@@ -189,7 +183,7 @@ echo "</script>";*/
 
 add_action('wp_footer', 'foundation_comptability', 10);
 
-endif;
+endif; */
 
 /**
  * Register Navigation Menus
