@@ -16,30 +16,50 @@ Tags: two-columns
 /* -------------------------------------------------- 
    Table of Contents
 -----------------------------------------------------
-:: UBCECESS.com-styles
 :: Images
 :: Posts
 :: Typography
 :: Header
 :: Shared Styles
-:: Page Name 1
-:: Page Name 2
 */
 
-/* -----------------------------------------
-   UBCECESS.com-styles
------------------------------------------ */
 @import "font-awesome/css/font-awesome.min.css";
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600);
 
+
+embed, iframe, object {
+  max-width: 100%;
+}
+* {
+  margin: 0; -ms-word-wrap: break-word; word-wrap: break-word;
+}
+
+html, body {
+  height: 100%;
+}
+.container {
+  min-height: 100%; height: auto !important; height: 100%; margin: 0 auto -60px; width:100%;
+}
+.push{
+  height: 60px;
+}
+
+@media (max-width: 767px) {
+  footer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
 
 .content-text {
-    font-size: 12px;
+    font-size: 13px;
+    font-family: 'Open Sans', sans-serif;
 }
 .ece-header  {background-color: #262626; padding: 60px;	margin: -1.875rem 0 20px 0;}	/* this is the ECE logo header */
 
 .ece-footer {
 	background-color: #262626; 
-	color:#d7d7d7; 
+	color:#777; 
 	padding: 30px 0px 0px 0px; 
 }
 .ece-sponsor-footer {
@@ -69,11 +89,19 @@ a.ece-footer-icons:hover{
 	color: #fff;
 }
 
-.small {font-size:80%;}
-.spacedcaps  {text-transform:uppercase; letter-spacing:1px;}
-.bordered{border:1px solid #dddddd; padding:3px;}
+.small {
+  font-size:80%;
+}
+.spacedcaps  {
+  text-transform:uppercase; letter-spacing:1px;
+}
+.bordered {
+  border:1px solid #dddddd; padding:3px;
+}
 
-nav.expanded { background-color: #111111 !important; }
+nav.expanded {
+  background-color: #111111 !important;
+}
 
 /* THESE ARE CUSTOMIZATIONS MADE TO THE FOUNDATION CSS CLASSES. */
 .orbit-bullets{margin:0 auto 30px auto;overflow:hidden;position:relative;top:10px}
@@ -119,8 +147,11 @@ article .th {margin-bottom:10px; margin-bottom:1em;}
    Typography
 ----------------------------------------- */
 
-body,h1,h2,h3,h4,h5,h6,p {font-family: 'Open Sans', sans-serif;}
-h1,h2,h3,h4,h5,h6,a:link {font-weight:300;}
+h1,h2,h3,h4,h5,h6
+{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+}
 
 
 .site-title .subheader {margin-bottom:0;}
@@ -129,9 +160,17 @@ h1,h2,h3,h4,h5,h6,a:link {font-weight:300;}
    Header
 ----------------------------------------- */
 
-.site-header {border-bottom:1px solid #ddd;padding:1.5rem 0 1rem 0;margin:-1.875em 0 1.875em 0;}
-.sidebar ul li {list-style:none;}
-.top-bar-section ul li>a {border-left:1px solid #333;border-right:none;}
+.site-header {
+  border-bottom:1px solid #ddd;
+  padding:1.5rem 0 1rem 0;
+  margin:-1.875em 0 1.875em 0;
+}
+.sidebar ul li {
+  list-style:none;
+}
+.top-bar-section ul li>a {
+  border-left: 1px solid #333;
+}
 
 /* -----------------------------------------
    Shared Styles
@@ -158,26 +197,5 @@ h1,h2,h3,h4,h5,h6,a:link {font-weight:300;}
 .site-content .gallery-columns-4 .gallery-item img {
 }
 
-embed,
-iframe,
-object {
-  max-width: 100%;
-}
-* {margin: 0; -ms-word-wrap: break-word; word-wrap: break-word;}
-html, body {height: 100%;}
-.container {min-height: 100%; height: auto !important; height: 100%; margin: 0 auto -60px; width:100%;}
-.push{height: 60px;}
-@media (max-width: 767px) {
-  footer {
-	padding-left: 20px;
-	padding-right: 20px;
-  }
-}
 
-/* -----------------------------------------
-   Page Name 1
------------------------------------------ */
 
-/* -----------------------------------------
-   Page Name 2
------------------------------------------ */

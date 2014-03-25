@@ -8,9 +8,7 @@ Description: Used to style the TinyMCE editor.
 html {
 	font-size: 87.5%;
 }
-html .mceContentBody {
-	max-width: 625px;
-}
+
 body {
 	color: #444;
 	font-family: "Open Sans", Helvetica, Arial, sans-serif;
@@ -208,8 +206,6 @@ textarea {
 	font-size: 0.857142857rem;
 	line-height: 1.714285714;
 	padding: 10px;
-	padding: 0.714285714rem;
-	width: 96%;
 }
 
 
